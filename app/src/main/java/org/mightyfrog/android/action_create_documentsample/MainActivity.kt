@@ -47,6 +47,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun openFile(uri: Uri) {
         Intent(Intent.ACTION_VIEW).apply {
+            // create & open document mime type must be the same!!!
             setDataAndType(uri, mimeType)
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
             addFlags(Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION)
