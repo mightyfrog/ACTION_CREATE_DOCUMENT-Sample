@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ACTION_CREATE_DOCUMENT Sample</string>
+    <string name="err">Error!</string>
+    <string name="text">Tap FAB to create a new file. The app writes a .png file to the directory and open it.</string>
+</resources>
