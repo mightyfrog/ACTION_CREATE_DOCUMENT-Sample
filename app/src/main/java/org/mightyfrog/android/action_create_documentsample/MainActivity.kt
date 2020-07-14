@@ -7,6 +7,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
+/**
+ * https://developer.android.com/reference/android/content/Intent#ACTION_CREATE_DOCUMENT
+ */
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,6 +40,7 @@ class MainActivity : AppCompatActivity() {
     private fun createFile() {
         Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
             type = mimeType
+            addCategory(Intent.CATEGORY_OPENABLE)
             addFlags(Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION)
             // pass a filename to populate the file chooser
             // framework takes care of duplicate filenames
